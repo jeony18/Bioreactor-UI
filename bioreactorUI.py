@@ -32,7 +32,7 @@ top_left.grid(row=0, column=0, sticky="nesw")
 mid_left.grid(row = 1, column = 0, sticky = "nesw")
 bottom_left.grid(row=2, column=0, sticky="nesw")    
 
-
+#initialize setpoint variable, label, slider, entry, and submit button for heating subsystem
 heat_var = tk.StringVar()
 heat_setpoint = tk.DoubleVar()
 heat_setpoint.set("25")
@@ -41,11 +41,13 @@ heat_slider = tk.Scale(bottom_left, length = 300, width = 25, from_ = 25, to = 3
 heat_entry = tk.Entry(bottom_left, width = 17, textvariable= heat_var)
 heat_submit_button = tk.Button(bottom_left, text= "Submit", command = lambda: setVar(1))
 
+#place
 heat_label.place(relx = 0.5, rely = 0.2, anchor = "center")
 heat_slider.place(relx = 0.725, rely = 0.5, anchor = "ne")
 heat_entry.place(relx = 0.74, rely=  0.5, anchor = "nw")
 heat_submit_button.place(relx = 0.74, rely=  0.6, anchor = "nw")
 
+#initialize setpoint variable, label, slider, entry, and submit button for stirring subsystem
 stir_var = tk.StringVar()
 stir_setpoint = tk.DoubleVar()
 stir_setpoint.set("500")
@@ -54,11 +56,13 @@ stir_slider = tk.Scale(mid_left, length = 300, width = 25, from_ = 500, to = 150
 stir_entry = tk.Entry(mid_left, width = 17, textvariable= stir_var)
 stir_submit_button = tk.Button(mid_left, text= "Submit", command = lambda: setVar(2))
 
+#place
 stir_label.place(relx = 0.5, rely = 0.2, anchor = "center")
 stir_slider.place(relx = 0.725, rely = 0.5, anchor = "ne")
 stir_entry.place(relx = 0.74, rely=  0.5, anchor = "nw")
 stir_submit_button.place(relx = 0.74, rely=  0.6, anchor = "nw")
 
+#initialize setpoint variable, label, slider, entry, and submit button for pH subsystem
 pH_var = tk.StringVar()
 pH_setpoint = tk.DoubleVar()
 pH_setpoint.set("3")
@@ -67,6 +71,7 @@ pH_slider = tk.Scale(top_left, length = 300, width = 25, from_ = 3, to = 7, orie
 pH_entry = tk.Entry(top_left, width = 17, textvariable= pH_var)
 pH_submit_button = tk.Button(top_left, text= "Submit", command = lambda: setVar(3))
 
+#place
 pH_label.place(relx = 0.5, rely = 0.2, anchor = "center")
 pH_slider.place(relx = 0.725, rely = 0.5, anchor = "ne")
 pH_entry.place(relx = 0.74, rely=  0.5, anchor = "nw")
